@@ -14,3 +14,7 @@ resource "google_compute_instance" "gceserver" {
     }
 
 }
+
+output "ip" {
+  value = google_compute_instance.gceserver.current_status
+}
